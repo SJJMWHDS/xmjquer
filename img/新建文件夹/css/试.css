@@ -1,0 +1,93 @@
+/*
+* @Author: Mickey
+* @Date:   2018-08-02 08:44:40
+* @Last Modified by:   Mickey
+* @Last Modified time: 2018-08-07 10:56:59
+*/
+
+.one{
+	overflow:hidden;
+    /* (文本超出，以省略号代替) */
+	text-overflow:ellipsis;
+	/* (设置如何让处理元素) */
+	white-space: nowrap;
+}
+/* 多行文本超出显示.... */
+/* 使用文本 */
+.colums{
+	width: 200px;
+	/* height高度正好是line-height的四倍 */
+	height: 200px;
+	/* 必须结合的属性，将对象作为弹性伸缩盒子模型显示 */
+	display: -webkit-box;
+	/* 用来限制在一个块元素显示的文本的行数 */
+	-webkit-line-clamp: 4;
+	/* 必须结合的属性，设置或检索伸缩盒对象的子元素的排列方式 */
+	-webkit-box-orient: vartical;
+	/* 超出部分隐藏 */
+	overflow: hidden;
+	/* 可以用来在多行文本的情况下，用省略号..隐藏超出范围的文本 */
+	text-overflow: ellipsis;
+}
+	/* 多行文本超出显示...
+	   使用webkit的css扩展属性（webkit是私有属性）-webkit-line-clamp:
+	   注意：这是一个不规范的属性。他没有出现在css规范草案中。 */
+
+
+
+a{
+	display: block;
+	width: 200px;
+	height: 80px;
+	background: red;
+	/* 转化，平移
+	transform: translateY(-5px);
+	transition: all 0.5s; */
+	margin-top: 100px;
+}
+a:hover{
+/* 	阴影： box-shadow: 0  0  0  0  0  0;
+       水平平移
+       垂直平移
+       模糊度
+       大小
+       颜色
+       内阴影inset/外阴影 */
+    /* 转换：平移（水平距离   垂直距离） 下右为正，上左为负 */
+	transform: translate(-5px);
+	/* 水平平移的距离 */
+	transform: translateX(length);
+	/* 垂直平移的距离  */
+	transform: translateY(length);
+	/* 过渡的样式名称、时间 */
+	transition: all 0.5s;
+	/* 需要过渡的样式名称 */
+	transition-property: width;
+	/* 过渡持续的时间 */
+	transition-duration:  1s;
+	/* 过渡的速度曲线： linear匀速/ease-in先慢后快/贝赛尔曲线 */
+	transition-timing-function: linear;
+	 /* 延迟时间 /过渡开始的时间*/
+	transition-delay: 1s;
+}
+.box1,.box2/{
+	/* 新转换：旋转；顺时针为正，逆时针为负 */
+	transform: rotate(45deg);
+}
+.box3:hover{
+	/* 转换：缩放；放大/缩小 */
+	transform: scaleX(0.2 0.2)；
+}
+.box4:hover{
+	/* 转换：斜切（水平斜切的角度/垂直谢谢且的） */
+	/* transform： skew（20deg，30deg）*/
+	/* 水平 斜切的角度   transform： skewX */
+	/* 垂直斜切的角度   */
+	transform: skew(angle, angle);
+}
+/* 鼠标移入父级元素，让子级元素如何变化 */
+.box1:hover .son{
+	width: ;
+	height: ;
+	background-color: ;
+}
